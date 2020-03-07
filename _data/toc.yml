@@ -22,8 +22,8 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Home
-  url: /intro
+#- title: Home
+#  url: /intro
 
 # Adds a searchbar link
 - title: Search
@@ -38,8 +38,8 @@
 # A chapter w/ a collection of sections beneath it
 - title: Abstract
   url: /abstract
-  not_numbered: false
+  not_numbered: true
   
 - title: Code
   url: /features/dream_example
-  not_numbered: false
+  not_numbered: true
