@@ -1,1 +1,1 @@
-chmod -x ~/content/DreamMap.py;
+chmod 777 ~/content/DreamMap.py;
