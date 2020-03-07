@@ -268,8 +268,8 @@ $$
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#from DreamMap import approx_sampling, global_filter, local_filter</span>
-<span class="o">%</span><span class="k">run</span> DreamMap.py
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">DreamMap</span> <span class="k">import</span> <span class="n">approx_sampling</span><span class="p">,</span> <span class="n">global_filter</span><span class="p">,</span> <span class="n">local_filter</span>
+<span class="c1"># %run DreamMap.py</span>
 
 <span class="c1"># we need some information about the sequence:</span>
 <span class="n">tr</span> <span class="o">=</span> <span class="mf">3.06e-3</span>
@@ -318,35 +318,10 @@ $$
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>usage: DreamMap.py [-h] -i INFILE [-o OUTFILE] [-g GLOBAL_OUT] [-l LOCAL_OUT]
-                   [--alpha ALPHA] [--beta BETA] [--tr TR] [--etl ETL]
-                   [--dummies DUMMIES] [--t1 T1] [--niter NITER]
-                   [--nbins NBINS] [--blur_read] [--read_dim READ_DIM]
-DreamMap.py: error: the following arguments are required: -i/--infile/--in
-</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-An exception has occurred, use %tb to see the full traceback.
-
-<span class="ansi-red-intense-fg ansi-bold">SystemExit</span><span class="ansi-red-intense-fg ansi-bold">:</span> 2
-</pre>
-</div>
-</div>
-</div>
-<div class="jb_output_wrapper }}">
-<div class="output_area">
-
 
 
 <div class="output_png output_subarea ">
-<img src="../images/features/dream_example_7_2.png"
+<img src="../images/features/dream_example_7_0.png"
 >
 </div>
 
@@ -594,7 +569,7 @@ An exception has occurred, use %tb to see the full traceback.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">system</span> ./content/features/DreamMap.py
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> DreamMap.py
 </pre></div>
 
     </div>
@@ -607,24 +582,24 @@ An exception has occurred, use %tb to see the full traceback.
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>%system : The term &#39;%system&#39; is not recognized as the name of a cmdlet, function, script file, or operable program. Che
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>usage: DreamMap.py [-h] -i INFILE [-o OUTFILE] [-g GLOBAL_OUT] [-l LOCAL_OUT]
+                   [--alpha ALPHA] [--beta BETA] [--tr TR] [--etl ETL]
+                   [--dummies DUMMIES] [--t1 T1] [--niter NITER]
+                   [--nbins NBINS] [--blur_read] [--read_dim READ_DIM]
+DreamMap.py: error: the following arguments are required: -i/--infile/--in
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
-ck the spelling of the name, or if a path was included, verify that the path is correct and try again.
+<div class="output_subarea output_text output_error">
+<pre>
+An exception has occurred, use %tb to see the full traceback.
 
-At line:1 char:1
-
-+ %system ./DreamMap.py
-
-+ ~~~~~~~
-
-    + CategoryInfo          : ObjectNotFound: (%system:String) [], CommandNotFoundException
-
-    + FullyQualifiedErrorId : CommandNotFoundException
-
- 
-
-
+<span class="ansi-red-intense-fg ansi-bold">SystemExit</span><span class="ansi-red-intense-fg ansi-bold">:</span> 2
 </pre>
 </div>
 </div>
@@ -654,7 +629,7 @@ At line:1 char:1
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">system</span> ./content/features/DreamMap.py -i ./content/features/3DREAM_R4.nii.gz --alpha <span class="m">60</span> --beta <span class="m">6</span> --tr <span class="m">3</span>.06e-3 --etl <span class="m">266</span> --dummies <span class="m">1</span> --t1 <span class="m">2</span> --read_dim <span class="m">1</span> -o fa_r4_origin.nii.gz -g fa_r4_global.nii.gz -l fa_r4_local.nii.gz
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> DreamMap.py -i 3DREAM_R4.nii.gz --alpha 60 --beta 6 --tr 3.06e-3 --etl 266 --dummies 1 --t1 2 --read_dim 1 -o fa_r4_origin.nii.gz -g fa_r4_global.nii.gz -l fa_r4_local.nii.gz
 </pre></div>
 
     </div>
@@ -667,12 +642,27 @@ At line:1 char:1
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Kire\Desktop\Kniga\3Dream_book\content\features\DreamMap.py:223: DeprecationWarning: get_data() is deprecated in favor of get_fdata(), which has a more predictable return type. To obtain get_data() behavior going forward, use numpy.asanyarray(img.dataobj).
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[]</pre>
+* deprecated from version: 3.0
+* Will raise &lt;class &#39;nibabel.deprecator.ExpiredDeprecationError&#39;&gt; as of version: 5.0
+  data = nii.get_data()
+</pre>
 </div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>alpha =  60.0
+beta =  6.0
+etl =  266.0
+tr =  0.00306
+t1 =  2.0
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -716,36 +706,26 @@ At line:1 char:1
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\DatVis\lib\site-packages\nibabel\loadsave.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(filename, **kwargs)</span>
-<span class="ansi-green-fg">     41</span>     <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 42</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>stat_result <span class="ansi-yellow-intense-fg ansi-bold">=</span> os<span class="ansi-yellow-intense-fg ansi-bold">.</span>stat<span class="ansi-yellow-intense-fg ansi-bold">(</span>filename<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     43</span>     <span class="ansi-green-intense-fg ansi-bold">except</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Kire\Anaconda3\envs\DatVis\lib\site-packages\ipykernel_launcher.py:1: DeprecationWarning: get_data() is deprecated in favor of get_fdata(), which has a more predictable return type. To obtain get_data() behavior going forward, use numpy.asanyarray(img.dataobj).
 
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [WinError 2] The system cannot find the file specified: &#39;fa_r4_local.nii.gz&#39;
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-8-5cf57d1b7cf5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>newmap <span class="ansi-yellow-intense-fg ansi-bold">=</span> nib<span class="ansi-yellow-intense-fg ansi-bold">.</span>load<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;fa_r4_local.nii.gz&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>get_data<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>imshow<span class="ansi-yellow-intense-fg ansi-bold">(</span>newmap<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">12</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> vmin<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> vmax<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">80</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">;</span>
-<span class="ansi-green-fg">      3</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>axis<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;off&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">;</span>
-<span class="ansi-green-fg">      4</span> cbar <span class="ansi-yellow-intense-fg ansi-bold">=</span> plt<span class="ansi-yellow-intense-fg ansi-bold">.</span>colorbar<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">;</span>
-<span class="ansi-green-fg">      5</span> cbar<span class="ansi-yellow-intense-fg ansi-bold">.</span>ax<span class="ansi-yellow-intense-fg ansi-bold">.</span>set_title<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;FA [°]&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> pad<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">12</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">;</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\DatVis\lib\site-packages\nibabel\loadsave.py</span> in <span class="ansi-cyan-fg">load</span><span class="ansi-blue-intense-fg ansi-bold">(filename, **kwargs)</span>
-<span class="ansi-green-fg">     42</span>         stat_result <span class="ansi-yellow-intense-fg ansi-bold">=</span> os<span class="ansi-yellow-intense-fg ansi-bold">.</span>stat<span class="ansi-yellow-intense-fg ansi-bold">(</span>filename<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     43</span>     <span class="ansi-green-intense-fg ansi-bold">except</span> OSError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 44</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> FileNotFoundError<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;No such file or no access: &#39;%s&#39;&#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">%</span> filename<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     45</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> stat_result<span class="ansi-yellow-intense-fg ansi-bold">.</span>st_size <span class="ansi-yellow-intense-fg ansi-bold">&lt;=</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     46</span>         <span class="ansi-green-intense-fg ansi-bold">raise</span> ImageFileError<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Empty file: &#39;%s&#39;&#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">%</span> filename<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: No such file or no access: &#39;fa_r4_local.nii.gz&#39;</pre>
+* deprecated from version: 3.0
+* Will raise &lt;class &#39;nibabel.deprecator.ExpiredDeprecationError&#39;&gt; as of version: 5.0
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
 </div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../images/features/dream_example_19_1.png"
+>
+</div>
+
 </div>
 </div>
 </div>
@@ -774,15 +754,12 @@ During handling of the above exception, another exception occurred:
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-f2cf4ac4c2f1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">(</span>newmap<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;newmap&#39; is not defined</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(42, 42, 32)</pre>
 </div>
+
 </div>
 </div>
 </div>
