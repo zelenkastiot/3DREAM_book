@@ -22,8 +22,8 @@
 # See the links below for an example.
 
 # Top-level page
-#- title: Home
-#  url: /intro
+- url: /intro
+  not_numbered: true
 
 # Adds a searchbar link
 - title: Search
