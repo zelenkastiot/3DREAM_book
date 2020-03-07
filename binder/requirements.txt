@@ -1,0 +1,10 @@
+pandas
+numpy
+datascience
+folium
+matplotlib
+nbinteract
+scipy
+pandas
+argparse
+nibabel

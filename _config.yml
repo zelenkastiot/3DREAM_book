@@ -16,11 +16,11 @@
 
 #######################################################################################
 # Jekyll site settings
-title: 3DREAM book
-author: YOUR AUTHOR NAME
+title: B1-mapping using 3DREAM
+author: Philipp Ehses
 email: YOUR EMAIL
 description: >-
-  This is an example book built with Jupyter Books.
+  Demonstration of a 3D version of the DREAM sequence (3DREAM) for rapid 3D flip angles and B1 mapping of the human brain. 
 
 baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url: YOUR URL                  # the base hostname & protocol for your site, e.g. http://example.com

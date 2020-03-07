@@ -26,12 +26,6 @@
   url: /intro
   not_numbered: true
 
-# External link
-- title: GitHub repo
-  url: https://github.com/zelenkastiot/3Dream_book
-  external: true
-  not_numbered: true
-
 # Adds a searchbar link
 - title: Search
   search: true
@@ -43,7 +37,6 @@
 - header: Demo book
 
 # A chapter w/ a collection of sections beneath it
-
 - title: Abstract
   url: /abstract
   not_numbered: false
