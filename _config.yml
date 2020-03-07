@@ -16,7 +16,7 @@
 
 #######################################################################################
 # Jekyll site settings
-title: YOUR BOOK NAME
+title: 3DREAM book
 author: YOUR AUTHOR NAME
 email: YOUR EMAIL
 description: >-
@@ -158,6 +158,4 @@ plugins:
 - jekyll-scholar
 
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
-jupyter_book_version: 0.6.4
-
-use_thebelab_button: true
+jupyter_book_version: 0.6.4 
