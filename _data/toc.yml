@@ -21,6 +21,17 @@
 #
 # See the links below for an example.
 
+# Top-level page
+- title: Home
+  url: /intro
+  not_numbered: true
+
+# External link
+- title: GitHub_3DREAM
+  url: https://github.com/zelenkastiot/3Dream_book
+  external: true
+  not_numbered: true
+
 # Adds a searchbar link
 - title: Search
   search: true
@@ -29,9 +40,10 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Demo 
+- header: Demo book
 
 # A chapter w/ a collection of sections beneath it
+
 - title: Jupyter notebook
   url: /features/dream_example
   not_numbered: true
