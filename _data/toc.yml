@@ -32,8 +32,6 @@
 - header: Demo 
 
 # A chapter w/ a collection of sections beneath it
-- title: 3DREAM Notebook
-  sections:
-  - title: Jupyter notebook
-    url: /features/dream_example
-    not_numbered: true
+- title: Jupyter notebook
+  url: /features/dream_example
+  not_numbered: true
