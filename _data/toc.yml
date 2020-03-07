@@ -47,5 +47,5 @@
     url: /features/markdown
     not_numbered: true
   - title: Jupyter notebooks
-    url: /features/notebooks
-    not_numbered: false
+    url: /features/dream_example
+    not_numbered: true
