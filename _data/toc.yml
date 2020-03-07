@@ -27,7 +27,7 @@
   not_numbered: true
 
 # External link
-- title: GitHub_3DREAM
+- title: GitHub repo
   url: https://github.com/zelenkastiot/3Dream_book
   external: true
   not_numbered: true
@@ -44,6 +44,10 @@
 
 # A chapter w/ a collection of sections beneath it
 
-- title: Jupyter notebook
+- title: Abstract
+  url: /abstract
+  not_numbered: false
+  
+- title: Code
   url: /features/dream_example
-  not_numbered: true
+  not_numbered: false
