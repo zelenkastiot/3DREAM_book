@@ -21,7 +21,14 @@
 #
 # See the links below for an example.
 
+# Top-level page
+- title: Introduction
+  url: /intro
+  not_numbered: true
 
+# Adds a searchbar link
+- title: Search
+  search: true
 
 # Divider for meta-pages and content page
 - divider: true
@@ -32,8 +39,8 @@
 # A chapter w/ a collection of sections beneath it
 - title: Abstract
   url: /abstract
-  not_numbered: true
+  not_numbered: false
   
 - title: Code
   url: /features/dream_example
-  not_numbered: true
+  not_numbered: false
