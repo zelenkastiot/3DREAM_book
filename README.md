@@ -1,7 +1,9 @@
 # 3DREAM Jupyter-Book
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zelenkastiot/3Dream_book/master)
 
-Paper: https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27773
+Paper: https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27773 
+
+
 Code: https://gitlab.com/pehses/3dream-example
 
 ## Whole-brain B1-mapping using three-dimensional DREAM
