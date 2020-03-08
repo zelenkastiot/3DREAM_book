@@ -269,7 +269,7 @@ $$
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#from DreamMap import approx_sampling, global_filter, local_filter</span>
-<span class="o">%</span><span class="k">run</span> DreamMap.py
+<span class="o">%</span><span class="k">run</span> ./content/features/DreamMap.py
 
 <span class="c1"># we need some information about the sequence:</span>
 <span class="n">tr</span> <span class="o">=</span> <span class="mf">3.06e-3</span>
@@ -318,13 +318,28 @@ $$
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
-
-
-<div class="output_png output_subarea ">
-<img src="../images/features/dream_example_7_0.png"
->
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>ERROR:root:File `&#39;./content/features/DreamMap.py&#39;` not found.
+</pre>
 </div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-fd792859517b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">     18</span> <span class="ansi-red-intense-fg ansi-bold"># i.e. the time after DREAM preparation after which each k-space line is acquired</span>
+<span class="ansi-green-fg">     19</span> <span class="ansi-red-intense-fg ansi-bold"># to do this, there&#39;s a helper function that approximates the spiral-out PE order:</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 20</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>ti_r1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> approx_sampling<span class="ansi-yellow-intense-fg ansi-bold">(</span>dream_r1<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> etl_r1<span class="ansi-yellow-intense-fg ansi-bold">,</span> tr<span class="ansi-yellow-intense-fg ansi-bold">,</span> dummies<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     21</span> ti_r4 <span class="ansi-yellow-intense-fg ansi-bold">=</span> approx_sampling<span class="ansi-yellow-intense-fg ansi-bold">(</span>dream_r4<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> etl_r4<span class="ansi-yellow-intense-fg ansi-bold">,</span> tr<span class="ansi-yellow-intense-fg ansi-bold">,</span> dummies<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     22</span> 
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;approx_sampling&#39; is not defined</pre>
+</div>
 </div>
 </div>
 </div>
