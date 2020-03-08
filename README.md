@@ -11,3 +11,6 @@ Code: https://gitlab.com/pehses/3dream-example
 *Philip Ehses* | *Daniel Brenner* | *Rudiger Strinberg* | *Eberhard D.Pracht* |*Tony Stocker*
 
 **Purpose**: Demonstration of a 3D version of the DREAM sequence (3DREAM) for rapid 3D flip angle and B1 mapping of the human brain. 
+
+
+A demo of the hosted book: https://zelenkastiot.github.io/3Dream_book/intro 
