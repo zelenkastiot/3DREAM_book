@@ -20,8 +20,8 @@ title: B1-mapping using 3DREAM
 author: Philipp Ehses
 email: YOUR EMAIL
 description: >-
-  Demonstration of a 3D version of the DREAM sequence (3DREAM) for rapid 3D flip angles and B1 mapping of the human brain. 
-
+  Demonstration of a 3D version of the DREAM sequence (3DREAM) for rapid 3D flip angles
+  and B1 mapping of the human brain. 
 baseurl: /  # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 url: YOUR URL                  # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -46,7 +46,7 @@ number_toc_chapters: true         # Whether to add numbers to chapterse in your 
 search_max_words_in_content: 100   # In the search function, use at most this many words (too many words will make search slow)
 
 # Controlling page information
-page_titles: /_data/toc                      # Either `None`, `infer`, or `toc`
+page_titles: /_data/toc                 # Either `None`, `infer`, or `toc`
 page_authors: None                     # Either `None` or `infer`
 filename_title_split_character: _     # If inferring titles based on filename, splt on this character.
 
@@ -65,12 +65,12 @@ jupyterhub_url: ''                     # The URL for your JupyterHub. If no URL,
 jupyterhub_interact_text: Interact             # The text that interact buttons will contain.
 
 # Binder link settings
-use_binder_button: true                 # If 'true', add a binder button for interactive links
+use_binder_button: true                  # If 'true', add a binder button for interactive links
 binderhub_url: https://mybinder.org                        # The URL for your BinderHub. If no URL, use ""
 binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
-binder_repo_org: zelenkastiot                     # The username or organization that owns this repository
-binder_repo_name: 3Dream_book                        # The name of the repository on the web
-binder_repo_branch: master                   # The branch on which your textbook is hosted.
+binder_repo_org: zelenkastiot                 # The username or organization that owns this repository
+binder_repo_name: 3Dream_book                      # The name of the repository on the web
+binder_repo_branch: master                     # The branch on which your textbook is hosted.
 binderhub_interact_text: Interact              # The text that interact buttons will contain.
 
 # Thebelab settings
@@ -82,7 +82,7 @@ codemirror_theme: abcdef                     # Theme for codemirror cells, for o
 use_show_widgets_button: true                # If 'true', display a button to allow in-page running code cells with nbinteract
 
 # Download settings
-use_download_button: true               # If 'true', display a button to download a zip file for the notebook
+use_download_button: true                # If 'true', display a button to download a zip file for the notebook
 download_button_text: Download                # The text that download buttons will contain
 download_page_header: Made with Jupyter Book                # A header that will be displayed at the top of and PDF-printed page
 
@@ -158,4 +158,4 @@ plugins:
 - jekyll-scholar
 
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
-jupyter_book_version: 0.6.4 
+jupyter_book_version: 0.6.4
