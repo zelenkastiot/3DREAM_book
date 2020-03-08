@@ -38,9 +38,9 @@
   url: /01/intro
   not_numbered: true
 
-#- title: Theory
-#  url: /02/theory
-#  not_numbered: true
+- title: Theory
+  url: /02/theory
+  not_numbered: true
 
 - title: Methods
   url: /02/theory
