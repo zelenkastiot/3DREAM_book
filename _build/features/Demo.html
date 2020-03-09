@@ -1,0 +1,162 @@
+---
+redirect_from:
+  - "/features/demo"
+interact_link: content/features/Demo.ipynb
+kernel_name: python3
+kernel_path: content/features
+has_widgets: false
+title: |-
+  Demo
+pagenum: 7
+prev_page:
+  url: /features/dream_example.html
+next_page:
+  url: 
+suffix: .ipynb
+search: visualization
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Demo</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Visualization">Visualization<a class="anchor-link" href="#Visualization"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">sio</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">HBox</span><span class="p">,</span> <span class="n">widgets</span><span class="p">,</span> <span class="n">interact</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;newmap.mat&quot;</span><span class="p">,</span> <span class="n">matlab_compatible</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">newmap</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="s1">&#39;vect&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colorbar_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span><span class="s2">&quot;FA [°]&quot;</span><span class="p">}</span>
+<span class="c1"># img_height = 262</span>
+<span class="c1"># img_widtg = 229</span>
+<span class="n">zero_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">newmap</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,:])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Heatmap</span><span class="p">(</span><span class="n">z</span> <span class="o">=</span> <span class="n">zero_matrix</span><span class="p">,</span>
+                         <span class="n">showscale</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                         <span class="n">autocolorscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                         <span class="n">colorbar</span> <span class="o">=</span> <span class="n">colorbar_dict</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">524</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">458</span><span class="p">)</span>
+
+<span class="c1"># Create FigureWidget from fig.</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">FigureWidget</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Slider newmap&#39;</span>
+
+<span class="c1"># Create IntSlider</span>
+<span class="n">slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nb">max</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span>
+    <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;zpos:&#39;</span><span class="p">,</span>
+    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span>
+    <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+
+<span class="n">slider</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="s1">&#39;324px&#39;</span>
+
+<span class="c1"># Function that will modify plot.</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">newmap</span><span class="p">[:,</span><span class="n">y</span><span class="p">,:])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current slice is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+    
+<span class="c1"># Display the FigureWidget and slider with center justification.</span>
+<span class="n">hb</span> <span class="o">=</span> <span class="n">HBox</span><span class="p">((</span><span class="n">f</span><span class="p">,</span> <span class="n">interactive</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">slider</span><span class="p">)))</span>
+<span class="n">hb</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">align_items</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">hb</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+
+ 
+ 
+<div id="fb51ef46-906b-45df-8406-733290d84319"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#fb51ef46-906b-45df-8406-733290d84319');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "08e866c223a94102bb574d714f3793fc", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
