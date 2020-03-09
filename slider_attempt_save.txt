@@ -1,0 +1,44 @@
+colorbar_dict = {'title':"FA [°]"}
+img_height = 262
+img_width = 229
+zero_matrix = np.flip(newmap[:,0,:])
+
+fig = go.Figure()
+fig.add_trace(go.Heatmap(z = zero_matrix,
+                         showscale = True,
+                         autocolorscale=False,
+                         colorbar = colorbar_dict))
+fig.update_traces(overwrite=True)
+fig.update_xaxes(visible=False)
+fig.update_yaxes(visible=False)
+fig.update_layout(height=524, width=458)
+
+# Create FigureWidget from fig.
+f = go.FigureWidget(data=fig.data, layout=fig.layout)
+f.layout.title = 'Slider newmap'
+
+# Create IntSlider
+slider = widgets.IntSlider(
+    value=0,
+    min=0,
+    max=31,
+    step=1,
+    description='zpos:',
+    disabled=False,
+    continuous_update=False,
+    orientation='vertical',
+    readout=True,
+    readout_format='d'
+)
+
+slider.layout.height = '324px'
+
+# Function that will modify plot.
+def update(y):
+    f.data[0]['z'] = np.flip(newmap[:,y,:])
+    print("Current slice is {}".format(y))
+    
+# Display the FigureWidget and slider with center justification.
+hb = HBox((f, interactive(update, y=slider)))
+hb.layout.align_items = 'center'
+display(hb)
