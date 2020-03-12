@@ -48,9 +48,17 @@
    - url: /03/subsection/1/01
    - url: /03/subsection/2/02
    
-- title: Code
-  url: /features/dream_example
+- title: Code Example
+  url: /features/DreamExample
   not_numbered: true
   
-- url: /features/Demo
+- url: /05/00
   not_numbered: true
+  expand_sections: true
+  sections:
+   - title: 2D figure
+     url: /05/subsection/01/PlotlyDemo
+   - title: 3D figure
+     url: /05/subsection/02/Demo_3D
+  
+  
