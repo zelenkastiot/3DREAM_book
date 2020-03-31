@@ -16,9 +16,10 @@
 
 #######################################################################################
 # Jekyll site settings
-title: B1-mapping using 3DREAM
-author: Philipp Ehses
-email: YOUR EMAIL
+title: <center> Whole-brain B<sub>1</sub>-mapping using three-dimensional DREAM </center>
+author: Philipp Ehses, Daniel Brenner, Rudiger Strinberg, Eberhard D.Pracht, Tony
+  Stocker
+email: zelenkastiot@gmail.com
 description: >-
   Demonstration of a 3D version of the DREAM sequence (3DREAM) for rapid 3D flip angles
   and B1 mapping of the human brain. 
@@ -30,8 +31,8 @@ url: YOUR URL                  # the base hostname & protocol for your site, e.g
 # Jupyter Book settings
 
 # Main page settings
-footer_text: This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
-  Jupyter Book Community</a>
+footer_text: This page was created by <a href="https://ismrm.github.io/mrhub/">MR-Hub</a>
+  Community
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
