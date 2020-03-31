@@ -1,6 +1,3 @@
-# Divider for meta-pages and content page
-- divider: true
-
 # Add a header and sample content section
 - header: Content
 
