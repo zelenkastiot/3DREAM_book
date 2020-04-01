@@ -1,3 +1,4 @@
+***
 After STE peparation with flip angle $\alpha$ and following the first imaging flip angle $\beta$, the FID and 
 STE signal intesities  are given by 
 
