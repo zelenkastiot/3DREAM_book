@@ -1,0 +1,40 @@
+# Add a header and sample content section
+- header: Content
+
+# Top-level page
+- title: Introduction
+  url: /intro
+  not_numbered: true
+
+# A chapter w/ a collection of sections beneath it
+- title: Abstract
+  url: /01/abstract
+  not_numbered: true
+
+- title: Theory
+  url: /02/theory
+  not_numbered: true
+   
+- title: Code Example
+  url: /03/DreamExample
+  not_numbered: true
+  
+- divider: true  
+  
+- url: /04/00
+  not_numbered: true
+  expand_sections: false
+  sections:
+   - title: 2D figure
+     url: /04/subsection/01/PlotlyDemo
+   - title: 3D figure
+     url: /04/subsection/02/Demo_3D
+   - title: Multiple Views 
+     url: /04/subsection/03/Multiple_views
+ 
+- url: https://github.com/zelenkastiot/3Dream_book
+  title: GitHub repository
+  external: true
+  not_numbered: true
+  
+  
