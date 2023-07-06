@@ -3,7 +3,7 @@ numpy
 folium
 matplotlib==3.2.0
 nbinteract==0.2.4
-scipy==1.4.1
+scipy==1.10.0
 argparse
 nibabel==3.0.1
 jupyter-book==0.6.4
